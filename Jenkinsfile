@@ -25,13 +25,13 @@ pipeline{
         stage('DEPLOY STACK'){
             when { expression { return params.STACK == 'DEPLOY'}}
             steps{
-                sh 'echo $params.STATICFILES'
+                sh 'echo "Esta webada es de deploy p gil"'
             }
         }
-        stage('DELETE STACK'){
-            when{ expression{ return params.STACK == 'DELETE'}}
+        stage('EJECUCION'){
+            when{ expression{ return params.STATICFILES == 'DEPLOY'}}
             steps{
-                sh 'echo $params.STATICFILES'
+                sh 'echo "Estamos en ejecución gente!!!"'
             }
         }
     }
