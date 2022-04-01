@@ -1,0 +1,6 @@
+makefiles/
+Makefile
+text.txt
+docker/
+jenkinsfiles/
+docker-compose.yml

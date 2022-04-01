@@ -22,13 +22,19 @@ pipeline{
         APELLIDO ='Gonzales'
     }
     stages{
-        stage('Build'){
+        stage('DEPLOY STACK'){
+            when { expression { return params.STACK == 'DEPLOY'}}
             steps{
-                sh 'echo $NOMBRE $APELLIDO'
+                sh 'echo $params.STATICFILES'
+            }
+        }
+        stage('DELETE STACK'){
+            when{ expression{ return params.STACK == 'DELETE'}}
+            steps{
+                sh 'echo $params.STATICFILES'
             }
         }
     }
 
 }
-
 
