@@ -29,7 +29,7 @@ variable "container_cpu" {
 }
 
 
-variable "port_mappings" {
+variable "container_port_mappings" {
   type = list(object({
     containerPort = number
     hostPort      = number

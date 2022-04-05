@@ -9,5 +9,5 @@ module "container" {
   container_cpu                = var.container_cpu
   essential                    = var.essential
   environment                  = var.container_environment
-  port_mappings                = var.port_mappings
+  container_port_mappings      = var.container_port_mappings
 }
