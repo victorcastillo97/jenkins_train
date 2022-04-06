@@ -6,4 +6,4 @@ essential                    = true
 
 container_environment = <%= options[:container_environment] %>
 
-container_port_mappings = <%= options[:container_port_mappings] %>
+container_port_mappings	= [{ "containerPort": <%= options[:CONTAINER_PORT] %>, "protocol": "tcp"}]
