@@ -1,3 +1,5 @@
+#configure locals varaibles https://github.com/cloudposse/terraform-aws-ecs-container-definition/blob/master/main.tf
+
 locals {
   container_definition =  {
     container_name               = var.container_name
